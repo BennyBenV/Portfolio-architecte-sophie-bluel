@@ -186,3 +186,23 @@ footer nav ul {
 	margin: 2em
 }
 
+/* Mon CSS */
+
+#filtre{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-bottom: 4rem;
+	gap: 1rem;
+	color: #1D6154;
+	font-family: 'Syne';
+}
+
+.fil{
+	border: solid #1D6154;
+	padding: 0.5rem;
+	border-radius: 100px;
+	border-radius: 100px;
+  	padding-left: 1rem;
+ 	padding-right: 1rem;
+}
