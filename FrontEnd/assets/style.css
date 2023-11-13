@@ -194,8 +194,6 @@ footer nav ul {
 	justify-content: center;
 	margin-bottom: 4rem;
 	gap: 1rem;
-	color: #1D6154;
-	font-family: 'Syne';
 }
 
 .fil{
@@ -205,4 +203,13 @@ footer nav ul {
 	border-radius: 100px;
   	padding-left: 1rem;
  	padding-right: 1rem;
+	background-color: white;
+	color: #1D6154;
+	font-family: 'Syne';
+
+}
+
+.fil:first-child{
+	background-color: #1D6154;
+	color: white;
 }
