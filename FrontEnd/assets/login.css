@@ -1,0 +1,55 @@
+html {
+    height: 100%;
+}
+
+
+.login {
+    font-weight: bold;
+}
+
+#formulaire > form{
+    margin-top: 8rem;
+}
+
+#formulaire > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.btn-connexion {
+    background-color: #1D6154;
+    color: white;
+    border-radius: 60px;
+    border-color: #1D6154;
+    border-style: none;
+    width: 11.2rem;
+    height: 2.2rem;
+    font-family: 'Syne';
+}
+
+.email-class,
+.mdp {
+    display: flex;
+    flex-direction: column-reverse;
+    color: #3D3D3D;
+    gap: 0.3rem;
+}
+
+.form-title {
+    color: #1D6154;
+}
+
+#password,
+#email-form {
+    width: 23.5rem;
+    height: 3.2rem;
+    box-shadow: 0px 4px 14px 0px #00000017;
+    border: white;
+}
+
+#oublie{
+    text-decoration: underline;
+}

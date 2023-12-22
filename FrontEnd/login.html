@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/login.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap"
+        rel="stylesheet">
+
+
+    <title>Login</title>
+</head>
+
+<body>
+    <header>
+        <div id="menu">
+			<a href="index.html"><h1>Sophie Bluel <span>Architecte d'intérieur</span></h1></a>
+			<nav>
+				<ul>
+					<li>projets</li>
+					<li>contact</li>
+					<button id="login">
+						<li><a href="login.html">login</a></li>
+					</button>
+					<button onclick="logout()" id="logout">
+						<li>logout</li>
+					</button>
+					<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
+				</ul>
+			</nav>
+		</div>
+    </header>
+    <section id="form">
+        <div id="formulaire">
+            <form action="">
+                <h1 class="form-title">Log In</h1>
+
+                <div class="email-class">
+                    <input type="email" id="email-form" name="email" />
+                    <label for="email-form">E-mail</label><br />
+
+                </div>
+
+                <div class="mdp">
+                    <input type="password" id="password" name="password" />
+                    <label for="password">Mot de passe</label><br />
+
+                </div>
+
+                <input type="button" value="Se connecter" class="btn-connexion" onclick="submitForm()">
+
+                <p id="messageErreur"></p>
+
+
+                <a href="" id="oublie">Mot de passe oublié</a>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <nav>
+            <ul>
+                <li>Mentions Légales</li>
+            </ul>
+        </nav>
+    </footer>
+    <script src="assets/login.js"></script>
+</body>
+
+</html>
