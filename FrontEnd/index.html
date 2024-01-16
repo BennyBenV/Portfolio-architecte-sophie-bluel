@@ -25,11 +25,17 @@
 			<p><i class="fa-regular fa-pen-to-square" style="color: #ffffff;"></i> Mode édition </p>
 		</div>
 		<div id="menu">
-			<a href="index.html"><h1>Sophie Bluel <span>Architecte d'intérieur</span></h1></a>
+			<a href="index.html">
+				<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
+			</a>
 			<nav>
 				<ul>
-					<a href="#projet"><li>projets</li></a>
-					<a href="#contact"><li>contact</li></a>
+					<a href="#projet">
+						<li>projets</li>
+					</a>
+					<a href="#contact">
+						<li>contact</li>
+					</a>
 					<button id="login">
 						<li><a href="login.html">login</a></li>
 					</button>
@@ -60,11 +66,12 @@
 		<section id="portfolio">
 			<div id="projet">
 				<h2>Mes Projets</h2>
-				<button id="ouvrirModal"><i class="fa-regular fa-pen-to-square" style="color: rgb(0, 0, 0);"></i>  modifier</button>
+				<button id="ouvrirModal"><i class="fa-regular fa-pen-to-square" style="color: rgb(0, 0, 0);"></i>
+					modifier</button>
 			</div>
 			<div id="modal" class="modal">
 				<div id="contenu">
-					<span class="fermer" id="fermer">&times;</span>
+					<i class="fa-solid fa-xmark fermer" id="fermer" style="font-size: 16px;"></i>
 					<p id="galeriePhoto">Galerie photo</p>
 					<div class="gallery2"></div>
 					<div id="addBtn">
@@ -73,18 +80,41 @@
 				</div>
 
 				<div id="ajoutImage">
-					<span class="fermer" id="fermer">&times;</span>
-					<p id="galeriePhoto">Ajout photo</p>
-					<div id="cadreAjout">
-						<i class="fa-regular fa-image" style="color: #B9C5CC;"></i>
-					</div>
-					<div id="addBtn">
-						<button id="addButton"> Valider</button>
-					</div>
+					<form id="formAjoutImage" enctype="multipart/form-data">
+						<div id="fetr">
+							<i class="fa-solid fa-arrow-left" id="flecheGauche" style="font-size: 16px;"></i>
+							<i class="fa-solid fa-xmark fermer" id="fermer" style="font-size: 16px;"></i>
+						</div>
+						<p id="galeriePhoto">Ajout photo</p>
+						<div id="cadreAjout">
+							<i class="fa-regular fa-image" id="logo-image" style="color: #B9C5CC;"></i>
+							<label id="addImageLabel">
+								<p id="descriptionCadreAjout">+ Ajouter image</p>
+								<input type="file" id="imageUrl" name="image" accept="image/*" style="display: none;"
+									required>
+							</label>
+
+							<span id="addPhotoDescription">jpg, png : 4mo max</span>
+						</div>
+
+						<label for="title">Titre</label>
+						<input type="text" id="title" name="title" required>
+
+						<label for="categoryId">Catégorie</label>
+						<select id="categoryId" name="categoryId" required>
+							<option value=" "></option>
+							<option value="1">Objets</option>
+							<option value="2">Appartements</option>
+							<option value="3">Hotels & restaurants</option>
+						</select>
+						<div id="addBtn">
+							<input type="submit" id="submitImage" name="valider">
+						</div>
+					</form>
 
 				</div>
 			</div>
-			
+
 
 			<div id="filtre">
 				<button class="fil" data-category-id="tous" class="active">Tous</button>
