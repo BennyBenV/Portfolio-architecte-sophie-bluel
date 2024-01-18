@@ -43,8 +43,6 @@ function submitForm() {
             // Redirection vers la page d'accueil
             window.location.href = 'index.html';
 
-            message.innerHTML = "Connexion réussie!";
-            message.style.color = "green";
         })
         .catch(error => {   
             console.error('Erreur de connexion:', error.message);
