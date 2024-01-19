@@ -385,7 +385,7 @@ a {
 	flex-direction: column;
 }
 
-#fermer {
+#fermer, #fermerCadreAjout {
 	color: #aaa;
 	float: right;
 	font-size: 28px;
@@ -393,6 +393,10 @@ a {
 	cursor: pointer;
 	justify-content: flex-end;
 	display: flex;
+}
+
+#fermerCadreAjout:hover{
+	color: black;
 }
 
 #fermer:hover {

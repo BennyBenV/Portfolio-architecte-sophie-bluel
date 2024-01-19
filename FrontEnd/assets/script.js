@@ -70,8 +70,6 @@ function getDataFromAPI(categoryId, button) {
                     imageContainer.style.display = 'flex';
                     imageContainer.style.position = 'relative';
 
-
-
                     // Création de l'élément figcaption 
                     const titre = document.createElement('figcaption');
                     //Récupération de title de l'API
@@ -133,7 +131,6 @@ function openModal() {
                 var imageId = image.dataset.id;
                 deleteImage(imageId);
                 image.closest('.image-container').remove();
-                //getDataFromAPIModal(); // Met à jour la liste des images
             }
         });
 
@@ -169,6 +166,7 @@ function openModal() {
 function closeModal() {
     var modal = document.getElementById('modal');
     modal.style.display = 'none';
+
 }
 
 // Ouvre la modale au clic du bouton "modifier" sur la page principal
@@ -176,8 +174,12 @@ var ouvrirModal = document.getElementById('ouvrirModal');
 ouvrirModal.addEventListener('click', openModal);
 
 // Fermeture de la modal au clic de la croix
-var fermerModal = document.querySelector('.fermer');
+var fermerModal = document.getElementById('fermer');
+var fermerCadreAjout = document.getElementById('fermerCadreAjout');
+
 fermerModal.addEventListener('click', closeModal);
+fermerCadreAjout.addEventListener('click', closeModal);
+
 
 
 // Ferme la modale quand on clique en dehors de celle-ci
@@ -313,12 +315,14 @@ btnAjoutProjet.addEventListener('click', async function (event) {
         });
 
         if (response.status === 201) {
+
             console.log("Projet ajouté avec succès");
             var previsualisation = document.getElementById("previsualisation");
             var descriptionCadreAjout = document.getElementById("descriptionCadreAjout");
             var logoImage = document.getElementById("logo-image");
             var addPhotoDescription = document.getElementById("addPhotoDescription");
             var addImageLabel = document.getElementById("addImageLabel");
+            //Etat initial du cadre du cadre d'ajout après avoir ajouter une image
             previsualisation.remove();
             descriptionCadreAjout.style.display = "initial";
             logoImage.style.display = "initial";
